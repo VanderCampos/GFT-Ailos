@@ -5,7 +5,7 @@ namespace Questao5.Infrastructure.Sqlite
 {
     public class DatabaseBootstrap : IDatabaseBootstrap
     {
-        private readonly DatabaseConfig databaseConfig;
+        protected readonly DatabaseConfig databaseConfig;
 
         public DatabaseBootstrap(DatabaseConfig databaseConfig)
         {
