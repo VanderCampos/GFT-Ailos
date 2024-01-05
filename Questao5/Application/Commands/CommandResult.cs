@@ -1,4 +1,6 @@
-﻿namespace Questao5.Application.Commands
+﻿using System.Runtime.CompilerServices;
+
+namespace Questao5.Application.Commands
 {
 	public class CommandResult : ICommandResult
 	{

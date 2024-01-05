@@ -22,9 +22,9 @@ namespace Questao5.Application.Handlers
 			_repositoryContaCorrente = repositoryContaCorrente;
 		}
 
-		public Task<CommandResult> Handle(CreateMovimentacaoRequest request, CancellationToken cancellationToken)
+		public Task<CommandResult> Handle(CreateMovimentacaoRequest command, CancellationToken cancellationToken)
 		{
-			if (!Validate(request, out string erros))
+			if (!Validate(command, out string erros))
 				return Task.FromResult(
 					new CommandResult()
 					{
@@ -36,9 +36,9 @@ namespace Questao5.Application.Handlers
 				IdMovimento = Guid.NewGuid().ToString().ToUpper(),
 				DataMovimento = DateTime.Now,
 
-				IdContaCorrente = request.IdContaCorrente,
-				TipoMovimento = request.TipoMovimento,
-				Valor = request.Valor				
+				IdContaCorrente = command.IdContaCorrente,
+				TipoMovimento = command.TipoMovimento,
+				Valor = command.Valor				
 			};
 
 			_repository.Insert(movimento);
@@ -46,7 +46,8 @@ namespace Questao5.Application.Handlers
 			return Task.FromResult(
 					new CommandResult()
 					{
-						Data = Guid.Parse(movimento.IdMovimento.ToUpper())
+						//Data = Guid.Parse(movimento.IdMovimento.ToUpper())
+						Data = movimento.IdMovimento.ToUpper()
 					});
 		}
 
