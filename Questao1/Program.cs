@@ -11,7 +11,7 @@ namespace Questao1 {
             int numero = int.Parse(Console.ReadLine());
             Console.Write("Entre o titular da conta: ");
             string titular = Console.ReadLine();
-            Console.Write("Haverá depósito inicial (s/n)? ");
+            Console.Write("Haverá depósito inicial (s/n)?  ");
             char resp = char.Parse(Console.ReadLine());
             if (resp == 's' || resp == 'S') {
                 Console.Write("Entre o valor de depósito inicial: ");

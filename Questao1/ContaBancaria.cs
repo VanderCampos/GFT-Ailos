@@ -7,12 +7,12 @@ namespace Questao1
 		private const double TAXASAQUE = 3.5;
 		private readonly int numero;
 		private string titular;
-		//private double depositoInicial;
+		private double depositoInicial;
 		private double saldo;
 
 		public double Numero { get => Numero; }
 		public string Titular { get => titular; set => titular = value; }
-		//public double DepositoInicial { get => depositoInicial;	}
+		public double DepositoInicial { get => depositoInicial;	}
 		public double Saldo { get => saldo; }
 
 		public ContaBancaria(int numero, string titular)
@@ -25,7 +25,7 @@ namespace Questao1
 		{
 			this.numero = numero;
 			this.titular = titular;
-			//this.depositoInicial = depositoInicial;
+			this.depositoInicial = depositoInicial;
 			this.saldo = depositoInicial;
 		}
 
