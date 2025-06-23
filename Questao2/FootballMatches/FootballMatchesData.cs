@@ -9,5 +9,6 @@
 		public string? Team2 { get; set; }
 		public int Team1goals { get; set; }
 		public int Team2goals { get; set; }
+
 	}
 }

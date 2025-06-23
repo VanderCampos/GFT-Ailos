@@ -46,7 +46,5 @@ namespace Questao2
 
 			return teamMatches;
 		}
-
-
 	}
 }

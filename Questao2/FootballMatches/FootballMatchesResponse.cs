@@ -12,5 +12,6 @@
 		{
 			data = new List<FootballMatchesData>();
 		}
+
 	}
 }
